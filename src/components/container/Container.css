@@ -1,0 +1,19 @@
+.container {
+    border-radius: 6px;
+    width: 50%;
+    height: 70%;
+    background: #ECF0F1;
+    top: 15%;
+    left: 25%;
+    position: absolute;
+}
+
+
+.linear-gradient {
+    height: 2%;
+    width: 100%;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    background: rgb(30, 50, 230);
+    background-image: linear-gradient(to right , #27AE5F 0, #27AE5F 20%, #8C46A6 20%, #8C46A6 40%, #4199D7 40%,#4199D7 60%, #E74C42 60%, #E74C42 80%, #EAC215 80%, #EAC215 100%);
+}

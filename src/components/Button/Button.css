@@ -1,0 +1,15 @@
+.btn-div {
+    text-align: center;
+}
+.btn {
+    height: 55px;
+    width: 76%;
+    font-size: 30px;
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    color: white;
+    background-color: #E84C3D;
+    
+}
