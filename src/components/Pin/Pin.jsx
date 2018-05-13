@@ -4,7 +4,7 @@ import './Pin.css';
 
 const Pin = ({ iconName }) => (
     <div className="pin">
-     <i  className={ iconName}></i>
+     <i className={iconName}></i>
     </div>
 );
 

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./SubTitle.css"
 
 const SubTitle = ({ className, children }) => (
-    <h5 className={ "subTitle " + className }>
+    <h5 className={`subTitle ${className}`}>
         {children}
     </h5>
 )
