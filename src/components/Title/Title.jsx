@@ -1,16 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React , { Component } from "react";
 import "./Title.css"
 
-const Title = ({ className, label  }) => (
-    <h1 className={ "title " + className }>
-        {label}
-    </h1>
-)
-
-Title.propTypes = {
-    label: PropTypes.string.isRequired,
-    className: PropTypes.string.isRequired,
-} 
-
-export default Title;
+export default class Title extends Component {
+    render() {
+        const {  children } = this.props;
+        return (
+            <div >
+                <h1 className="title" >
+                    { children }
+                </h1>
+            </div>
+        )
+    }
+}
