@@ -1,0 +1,12 @@
+.list {
+    width: 40%;
+    border: 2px solid lightblue;
+    background-color: lightcyan;
+    color: rgb(0, 14, 95);
+    font-weight: bold;
+}
+
+.line-through {
+    text-decoration: line-through;
+    color: red;
+}
