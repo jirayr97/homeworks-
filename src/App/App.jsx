@@ -1,11 +1,12 @@
 import React  , { Component } from "react";
-import List  from "../components/List/List";
+import "./App.css";
+import ImageContainer from "../components/ImageContainer/ImageContainer";
 
 export default  class App extends Component {
     render() {
         return (
-            <div>
-                <List />
+            <div className="main-container">
+             <ImageContainer/>
             </div>
         )
     }
