@@ -1,5 +1,6 @@
 import React , { Component } from "react";
 import "./TableHead.css";
+import PropTypes from "prop-types";
 
 export default class TableHead extends Component {
 
@@ -16,4 +17,9 @@ export default class TableHead extends Component {
             
         )
     }
+}
+
+TableHead.propTypes = {
+    handleClick: PropTypes.func.isRequired,
+    headData: PropTypes.array.isRequired
 }
