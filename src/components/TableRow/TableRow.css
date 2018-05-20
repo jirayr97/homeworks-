@@ -1,0 +1,13 @@
+tbody {
+    text-align: center;
+
+}
+
+td {
+    border-bottom: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+}
+
+tr:last-child {
+    border: 0;
+}
