@@ -16,16 +16,27 @@ export default class ImageContainer extends Component {
     
 
     increaseIndex = () => {
-        let i  = this.state.index;
-        i === 2 ? 0 : i++;
-        this.setState({index: i})
+        let { index } = this.state;
+        let i  = index === 2 ? 0 : ++index;
+        this.setState({index: i});
+    }
+
+    startSlider =() => {
+        this.interval = setInterval(()=> this.increaseIndex(), 2000);
     }
 
     componentDidMount() {
-        setInterval(()=> this.increaseIndex(), 2000)
-
+       this.startSlider();
     }
-    
+
+    hover = () => {
+        clearInterval(this.interval);
+    }
+
+    leave = () => {
+        this.startSlider();
+    }
+     
     render() {
         const { index } = this.state;
         const imageSrc = this.imgArray[index];
@@ -34,10 +45,12 @@ export default class ImageContainer extends Component {
 
         return (
             <div className="container">
-                <Button click={() => this.setState({index: leftIndex})} name="Left"/>
+                <Button  leave={this.leave} hover={this.hover} click={() => this.setState({index: leftIndex})} name="Left"/>
                 <img src={imageSrc} alt="image" className="image"/>
-                <Button click={() => this.setState({index: rightIndex})} name="Right"/>
+                <Button leave={this.leave} hover={this.hover} click={() => this.setState({index: rightIndex})} name="Right"/>
             </div>    
         )
     }
 }
+
+
