@@ -1,0 +1,12 @@
+.table-head {
+    border-bottom: 2px solid #ccc;
+}
+
+.head-item  {
+    height: 30px;
+    border-right: 2px solid #ccc;
+}
+
+.head-item:last-child  {
+    border-right: 0;
+}
