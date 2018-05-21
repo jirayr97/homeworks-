@@ -22,7 +22,10 @@ ListItem.propTypes = {
     text: PropTypes.string.isRequired,
     clickHandler: PropTypes.func.isRequired,
     className: PropTypes.string,
+}
 
+ListItem.defaultProps = {
+    className: "",
 }
 
 export default ListItem;

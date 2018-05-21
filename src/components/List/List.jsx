@@ -17,7 +17,7 @@ class List extends Component {
         
         if (index === 0 || items[index - 1].lineThrough) {
             items[index].lineThrough = true;
-            this.setState({ items: items });
+            this.setState({ items });
         }
     }   
     
@@ -31,10 +31,9 @@ class List extends Component {
                         text={item.text}
                         clickHandler={ () => this.handleClick(index)}
                         className={(item.lineThrough) ? "line-through" : ""}
-                        key={index}
+                        key={item.text}
                     />))
                 }
-                
             </ol>
         )
     }
