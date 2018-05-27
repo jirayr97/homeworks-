@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SearchForm from "../SearchForm/SearchForm";
+import SearchForm from "../SearchForm";
 import TableContainer from "../TableContainer";
 
 import "./App.css";
