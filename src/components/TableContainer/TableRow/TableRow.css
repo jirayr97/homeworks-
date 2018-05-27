@@ -1,0 +1,12 @@
+.table-row {
+    background-color: #FFF;
+    border-bottom: 1px solid #1B1E24;
+    color: #1B1E24;
+    font-size: 18px;
+    text-align: center;
+}
+
+.table-row:hover {
+    background-color: #1B1E24;
+    color: #A8D1E7;
+}
