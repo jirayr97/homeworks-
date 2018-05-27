@@ -1,0 +1,29 @@
+.table-header-row {
+    background-color: #1B1E24;
+    color: #C1E3F5;
+    border-bottom: 2px solid #7694A5;
+    border-right: 1px solid #7694A5;
+    font-size: 23px;
+    font-weight: normal;
+    cursor: pointer;
+    user-select: none;
+}
+
+.table-header-row:first-child {
+    border-top-left-radius: 3px;
+}
+
+.table-header-row:last-child {
+    border-top-right-radius: 3px;
+    border-right: none;
+}
+
+.table-header-cell {
+    padding: 15px;
+    border-right: 1px solid #7694A5;
+    font-weight: normal;
+}
+
+.table-header-cell::first-letter {
+    text-transform: uppercase;
+}
