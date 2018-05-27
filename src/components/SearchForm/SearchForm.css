@@ -1,0 +1,18 @@
+.form-container {
+    width:  400px;
+    background-color: lightgray;
+    height: 80px;
+    border-radius: 10px;
+    margin: 20px auto;
+    margin-top: 0;
+    border: 2px solid #1B1E24
+}
+
+.form {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#input {
+    margin: 0 3px;
+}
