@@ -14,7 +14,6 @@ export default class ImageContainer extends Component {
         this.imgArray = images;
     }
     
-
     increaseIndex = () => {
         let { index } = this.state;
         let i  = index === 2 ? 0 : ++index;
@@ -36,6 +35,9 @@ export default class ImageContainer extends Component {
     leave = () => {
         this.startSlider();
     }
+    click = (index) => {
+        this.setState({ index })
+    }
      
     render() {
         const { index } = this.state;
@@ -45,9 +47,9 @@ export default class ImageContainer extends Component {
 
         return (
             <div className="container">
-                <Button  leave={this.leave} hover={this.hover} click={() => this.setState({index: leftIndex})} name="Left"/>
+                <Button  leave={this.leave} hover={this.hover} click={() => this.click(leftIndex)} name="Left"/>
                 <img src={imageSrc} alt="image" className="image"/>
-                <Button leave={this.leave} hover={this.hover} click={() => this.setState({index: rightIndex})} name="Right"/>
+                <Button leave={this.leave} hover={this.hover} click={() => this.click(rightIndex)} name="Right"/>
             </div>    
         )
     }

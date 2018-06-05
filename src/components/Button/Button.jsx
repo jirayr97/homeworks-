@@ -2,8 +2,8 @@ import React from "react";
 import "./Button.css";
 import PropTypes from "prop-types";
 
-const Button =(props) => (
-    <button onMouseLeave={props.leave} onMouseOver={props.hover} onClick={props.click} className="btn">{props.name}</button>
+const Button =({ leave, hover, click, name }) => (
+    <button onMouseLeave={leave} onMouseOver={hover} onClick={click} className="btn">{name}</button>
 )
 
 
