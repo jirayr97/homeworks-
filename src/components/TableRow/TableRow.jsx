@@ -1,26 +1,26 @@
-import React, { Component } from "react";
+import React from "react";
 import "./TableRow.css";
 import PropTypes from "prop-types";
 
-
-export default class TableRow extends Component {
-    render() {
-        return(
-            <tbody>
-                {
-                    this.props.data.map(data => (
-                        <tr key={data.id} >
-                            <td >{data.name}</td>
-                            <td>{data.age}</td>
-                            <td>{data.averageGrade}</td>
-                            
-                        </tr> ))
-                }
-            </tbody>
-        );
-    }
-}
+const TableRow = ({ data }) => (
+    <tbody>
+        {
+            data.map(rowObject => (
+                <tr key={rowObject.id} >
+                    <td>{rowObject.name}</td>
+                    <td>{rowObject.age}</td>
+                    <td>{rowObject.averageGrade}</td>
+                </tr>))
+        }
+    </tbody>
+)
 
 TableRow.propTypes = {
-    data: PropTypes.array.isRequired
+    data: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string,
+        id: PropTypes.number,
+        age: PropTypes.number,
+        averageGrade: PropTypes.number,
+    }))
 }
+export default TableRow;

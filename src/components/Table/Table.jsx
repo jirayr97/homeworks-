@@ -16,12 +16,9 @@ export default class Table extends Component {
     }
 
     onAverageClick = (event, data) => {
-        switch(data) {
-            case dataHead[2]: 
-                this.sortWithAverageGrade();
-                break;
-            default:
-                break;
+        event.stopPropagation();
+        if (event.target.textContent === "Average Grade") {
+            this.sortWithAverageGrade();
         }
     }
 
@@ -41,7 +38,6 @@ export default class Table extends Component {
                 sortedByAscArr = [...this.defaultDataArrState];
                 this.averageSortState = 0;
                 break;
-
         }
         this.setState({
             dataArr: sortedByAscArr
@@ -53,11 +49,7 @@ export default class Table extends Component {
             <table className="table">
                 <TableHead handleClick={this.onAverageClick} headData={dataHead} />
                 <TableRow data={this.state.dataArr}/>
-
             </table>  
-           
-
-
         )
     }
 }
